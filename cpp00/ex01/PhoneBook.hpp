@@ -11,10 +11,10 @@ class PhoneBook
 {
     public:
         void    addContact();
+        void    searchContact();
     private:
         Contact _list[8];
         int     index;
-        int number_contact;
 };
 
 #endif

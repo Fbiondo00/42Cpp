@@ -18,10 +18,11 @@ int main (int ac, char **av)
     {   
     while (true)
     {        
-        std::cout << "Please enter a command: (ADD, SEARCH, EXIT)" << std::endl;
-        std::getline(std::cin, command) ;
+        std::cout << "(ADD, SEARCH, EXIT)" << std::endl;
         clearerr(stdin);
 		std::cin.clear();
+        std::cout << "$> ";
+        std::getline(std::cin, command) ;
         if (command.compare("ADD") == 0)
         {
            phonebook.addContact();
@@ -32,7 +33,7 @@ int main (int ac, char **av)
         }
        else if (command.compare("SEARCH") == 0)
         {
-            // phoneBook.search();
+            phonebook.searchContact();
         }
         else {
 			std::cout << "Invalid cmd." << std::endl;

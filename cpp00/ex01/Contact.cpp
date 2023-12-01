@@ -20,6 +20,34 @@ void Contact::createContact(int i) {
 	std::cout << "Phone number: ";
 	std::getline(std::cin >> std::ws, phone_number);
 	std::cout << "Darkar is secret: ";
-	std::getline(std::cin >> std::ws, darkis_secret);
+	std::getline(std::cin >> std::ws, darkest_secret);
+	ContactInfo();
 }
 
+void printContanct(std::string cont)
+{
+	std::string new_content;
+	
+	if(cont.length() > 10)
+		new_content = cont.substr(0, 9) + '.';
+	else
+		new_content = cont;
+	std::cout << '|' << std::right << new_content << std::endl;
+
+}
+
+void Contact::print(void) {
+	// printTableCell(intToString(index));
+	printContanct(first_name);
+	printContanct(last_name);
+	printContanct(nickname);
+	// std::cout << '|' << std::endl;
+}
+
+void Contact::ContactInfo(void) {
+	std::cout << "Ciao " << first_name
+		<< " " << last_name << std::endl
+		<< "Il tuo nick è " << nickname << std::endl
+		<< "Phone number: " << phone_number << std::endl
+		<< "Darkest secret: " << darkest_secret << std::endl;
+}
