@@ -21,7 +21,6 @@ void Contact::createContact(int i) {
 	std::getline(std::cin >> std::ws, phone_number);
 	std::cout << "Darkar is secret: ";
 	std::getline(std::cin >> std::ws, darkest_secret);
-	ContactInfo();
 }
 
 void printContanct(std::string cont)
@@ -32,22 +31,30 @@ void printContanct(std::string cont)
 		new_content = cont.substr(0, 9) + '.';
 	else
 		new_content = cont;
-	std::cout << '|' << std::right << new_content << std::endl;
+	std::cout << '|' << std::right << std::setw(10) << new_content;
 
+}
+
+std::string intToString(int nb) {
+	std::ostringstream ss;
+
+	ss << nb;
+
+	return ss.str();
 }
 
 void Contact::print(void) {
-	// printTableCell(intToString(index));
+	printContanct(intToString(index));
 	printContanct(first_name);
 	printContanct(last_name);
 	printContanct(nickname);
-	// std::cout << '|' << std::endl;
+	std::cout << '|' << std::endl;
 }
 
 void Contact::ContactInfo(void) {
-	std::cout << "Ciao " << first_name
-		<< " " << last_name << std::endl
-		<< "Il tuo nick è " << nickname << std::endl
+	std::cout << "NOME " << first_name
+		<< "COGNOME " << last_name << std::endl
+		<< "nick è " << nickname << std::endl
 		<< "Phone number: " << phone_number << std::endl
 		<< "Darkest secret: " << darkest_secret << std::endl;
 }

@@ -11,12 +11,11 @@ int main (int ac, char **av)
     std::string command;
     PhoneBook phonebook;
     Contact newcontact;
-    // int i = 0;
     if (ac != 1)
 		std::cout << "Too many arguments!" << std::endl;
     else 
     {   
-    while (true)
+    while (42)
     {        
         std::cout << "(ADD, SEARCH, EXIT)" << std::endl;
         clearerr(stdin);

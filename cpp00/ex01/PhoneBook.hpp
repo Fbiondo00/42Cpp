@@ -15,6 +15,7 @@ class PhoneBook
     private:
         Contact _list[8];
         int     index;
+        static int number_contact;
 };
 
 #endif

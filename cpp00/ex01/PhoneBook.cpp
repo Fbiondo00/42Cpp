@@ -1,41 +1,68 @@
 #include "PhoneBook.hpp"
 
-static  int number_contact;
+int PhoneBook::number_contact= 0;
 
 void PhoneBook::addContact()
 {
     Contact newContact;
     
     number_contact++;
+    
     index = number_contact % 8;
-
     newContact.createContact(index);
 	_list[index] = newContact;
 }
 
 
-void printcontact(Contact _list[])
+void printcontact(Contact _list[], int number_contact )
 {
-    for(int i = 0; i <= number_contact; i++){
+    for(int i = 0; i <= number_contact && i < 8; i++){
         _list[i].print();
     }
 }
 
-void printTable1(Contact _list[])
+void printTable1(Contact _list[], int i)
 {
     std::cout << "---------------------------------------------" << std::endl;
     std::cout << "|     Index|First name| Last name|  Nickname|" << std::endl;
     std::cout << "---------------------------------------------" << std::endl;
-    printcontact(_list);
+    printcontact(_list, i);
+    std::cout << "---------------------------------------------" << std::endl;
+}
+int stringToInt(const std::string& str)
+{
+	int nb = 0;
+
+	std::istringstream(str) >> nb;
+
+	return nb;
 }
 
 void PhoneBook::searchContact()
 {
+    std::string cmd;
+    int i = 0;
+    bool		is_valid = false;
+
+
     if(number_contact == 0)
     {
-        std::cout << "0 Contact :( " << std::endl;
+        std::cout << "Contact not found :( " << std::endl;
         return ;
     }
-    printTable1(_list);
-    std::cout << "1 Contact :) " << std::endl;
+    printTable1(_list, number_contact);
+    clearerr(stdin);
+		std::cin.clear();
+        std::cout << "$> Index ";
+        while(!is_valid){
+         std::getline(std::cin, cmd) ;
+        i = stringToInt(cmd);
+        if (i < 1 || number_contact < i) {
+			std::cout << "Invalid index." << std::endl;
+			std::cout << "Index: ";
+        }
+        else
+            is_valid = true;
+    }
+    _list[i].ContactInfo();
 }
