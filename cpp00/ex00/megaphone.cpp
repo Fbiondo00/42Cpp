@@ -24,4 +24,5 @@ int main(int ac, char **av)
         }
     }
     std::cout << std::endl;
+    return(0);
 }
