@@ -10,6 +10,7 @@
 class PhoneBook
 {
     public:
+        void    init();
         void    addContact();
         void    searchContact();
     private:

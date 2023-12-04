@@ -43,8 +43,14 @@ std::string intToString(int nb) {
 	return ss.str();
 }
 
+void printindex(int i)
+{
+	std::cout << '|' << std::right << std::setw(10) << i;
+
+}
+
 void Contact::print(void) {
-	printContanct(intToString(index));
+	printindex((index));
 	printContanct(first_name);
 	printContanct(last_name);
 	printContanct(nickname);

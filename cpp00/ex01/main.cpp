@@ -1,5 +1,9 @@
 #include "PhoneBook.hpp"
 
+void PhoneBook::init()
+{
+    this->index = 0;
+}
 
 // clearerr(stdin) è una funzione in stile C e 
 // std::cin.clear() è un metodo della classe 
@@ -11,6 +15,7 @@ int main (int ac, char **av)
     std::string command;
     PhoneBook phonebook;
     Contact newcontact;
+    phonebook.init();
     if (ac != 1)
 		std::cout << "Too many arguments!" << std::endl;
     else 
