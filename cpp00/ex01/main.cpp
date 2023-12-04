@@ -3,7 +3,13 @@
 void PhoneBook::init()
 {
     this->index = 0;
-}
+};
+
+size_t	Contact::getIndex(void) const
+{
+	return (this->i);
+};
+
 
 // clearerr(stdin) è una funzione in stile C e 
 // std::cin.clear() è un metodo della classe 

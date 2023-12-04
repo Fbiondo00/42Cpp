@@ -14,8 +14,8 @@ class PhoneBook
         void    addContact();
         void    searchContact();
     private:
-        Contact _list[8];
         int     index;
+        Contact _list[8];
         static int number_contact;
 };
 

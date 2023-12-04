@@ -14,8 +14,9 @@ class Contact {
 		void 		ContactInfo(void);
 		void		createContact(int i);
 		void		print(void);
+		     size_t	getIndex(void) const;
 	private:
-		int			index;
+		int			i;
 		std::string	first_name;
 		std::string	last_name;
 		std::string	nickname;

@@ -17,6 +17,7 @@ void PhoneBook::addContact()
 void printcontact(Contact _list[], int number_contact )
 {
     for(int i = 0; i <= number_contact && i < 8; i++){
+        std::cout << '|' << std::right << std::setw(10) << _list[i].getIndex();
         _list[i].print();
     }
 }

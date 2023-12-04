@@ -9,8 +9,8 @@
 // l'input dalla standard input (std::cin). 
 // std::ws è un manipolatore utilizzato per ignorare 
 // eventuali spazi bianchi iniziali o \n. 
-void Contact::createContact(int i) {
-	index = i;
+void Contact::createContact(int in) {
+	i = in;
 	std::cout << "First name: ";
 	std::getline(std::cin >> std::ws, first_name);
 	std::cout << "Last name: ";
@@ -41,16 +41,12 @@ std::string intToString(int nb) {
 	ss << nb;
 
 	return ss.str();
-}
+};
 
-void printindex(int i)
-{
-	std::cout << '|' << std::right << std::setw(10) << i;
 
-}
+
 
 void Contact::print(void) {
-	printindex((index));
 	printContanct(first_name);
 	printContanct(last_name);
 	printContanct(nickname);
