@@ -6,7 +6,7 @@
 /*   By: flaviobiondo <flaviobiondo@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 18:18:19 by flaviobiond       #+#    #+#             */
-/*   Updated: 2024/01/10 16:10:51 by flaviobiond      ###   ########.fr       */
+/*   Updated: 2024/01/10 21:05:34 by flaviobiond      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,37 +66,37 @@ std::ostream& operator<<(std::ostream& output, const Fixed& obj) {
 	return output;
 }
 
-bool Fixed::operator>(const Fixed& fixed) {
+bool Fixed::operator>(const Fixed& fixed) const {
 	if (_value > fixed.getRawBits())
 		return true;
 	return false;
 }
 
-bool Fixed::operator<(const Fixed& fixed) {
+bool Fixed::operator<(const Fixed& fixed) const{
 	if (_value < fixed.getRawBits())
 		return true;
 	return false;
 }
 
-bool Fixed::operator>=(const Fixed& fixed) {
+bool Fixed::operator>=(const Fixed& fixed) const{
 	if (_value >= fixed.getRawBits())
 		return true;
 	return false;
 }
 
-bool Fixed::operator<=(const Fixed& fixed) {
+bool Fixed::operator<=(const Fixed& fixed) const{
 	if (_value <= fixed.getRawBits())
 		return true;
 	return false;
 }
 
-bool Fixed::operator==(const Fixed& fixed) {
+bool Fixed::operator==(const Fixed& fixed) const{
 	if (_value == fixed.getRawBits())
 		return true;
 	return false;
 }
 
-bool Fixed::operator!=(const Fixed& fixed) {
+bool Fixed::operator!=(const Fixed& fixed) const{
 	if (_value != fixed.getRawBits())
 		return true;
 	return false;
@@ -144,4 +144,32 @@ Fixed Fixed::operator--(int){
 Fixed Fixed::operator++(void){
 	this->_value++;
 	return (*this);
+}
+
+Fixed	&Fixed::min(Fixed &f1, Fixed &f2)
+{
+	if (f1 > f2)
+		return (f2);
+	return (f1);
+}
+
+Fixed	&Fixed::max(Fixed &f1, Fixed &f2)
+{
+	if (f1 < f2)
+		return (f2);
+	return (f1);
+}
+
+Fixed const	&Fixed::min(Fixed const &f1, Fixed const &f2)
+{
+	if (f1 > f2)
+		return (f2);
+	return (f1);
+}
+
+Fixed const	&Fixed::max(Fixed const &f1, Fixed const &f2)
+{
+	if (f1 < f2)
+		return (f2);
+	return (f1);
 }
