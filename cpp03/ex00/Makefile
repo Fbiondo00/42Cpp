@@ -1,7 +1,7 @@
-NAME				:=		My_First_Class_in_Orthodox_Canonical_Form
+NAME				:=		Aaaaand...___OPEN!
 
 SRCS				:=		main.cpp \
-							Fixed.cpp 
+							ClapTrap.cpp \
 
 OBJS				:=		${SRCS:.cpp=.o}
 

@@ -5,21 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: flaviobiondo <flaviobiondo@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/06 18:02:56 by flaviobiond       #+#    #+#             */
-/*   Updated: 2023/12/27 15:03:44 by flaviobiond      ###   ########.fr       */
+/*   Created: 2023/12/27 22:44:39 by flaviobiond       #+#    #+#             */
+/*   Updated: 2024/01/03 18:12:52 by flaviobiond      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Fixed.hpp"
 
-int main ()
-{
-    int x = 4;
-    int i = -1;
-    Zombie *orgia;
-
-    orgia = zombieHorde(x, "dio");
-    while(++i < x)
-        orgia->announce(); 
-    delete[] orgia;
+int main( void ) {
+Fixed a;
+Fixed const b( 10);
+Fixed const c( 42.42f );
+Fixed const d( b );
+a = Fixed( 1234.4321f);
+std::cout << "a is " << a << std::endl;
+std::cout << "b is " << b << std::endl;
+std::cout << "c is " << c << std::endl;
+std::cout << "d is " << d << std::endl;
+std::cout << "a is " << a.toInt() << " as integer" << std::endl;
+std::cout << "b is " << b.toInt() << " as integer" << std::endl;
+std::cout << "c is " << c.toInt() << " as integer" << std::endl;
+std::cout << "d is " << d.toInt() << " as integer" << std::endl;
 }

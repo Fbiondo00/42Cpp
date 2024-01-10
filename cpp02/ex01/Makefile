@@ -1,5 +1,4 @@
-NAME				:=		My_First_Class_in_Orthodox_Canonical_Form
-
+NAME				:=		Towards_a_more_useful_fixed-point_number_class
 SRCS				:=		main.cpp \
 							Fixed.cpp 
 

@@ -25,7 +25,7 @@ int ft_replace(std::string& filename, std::string& str, std::string& new_str)
     std::string line;
     std::size_t f;
 
-    input.open(filename, std::ios::in);
+    input.open(filename.c_str(), std::ios::in);
     output.open(filename + ".replace", std::ios::out);
     if (!input.is_open() || !output.is_open()) {
 		std::cerr << "Error: Could not open file." << std::endl;
