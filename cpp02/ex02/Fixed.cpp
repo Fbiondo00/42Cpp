@@ -6,10 +6,9 @@
 /*   By: flaviobiondo <flaviobiondo@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 18:18:19 by flaviobiond       #+#    #+#             */
-/*   Updated: 2024/01/10 21:05:34 by flaviobiond      ###   ########.fr       */
+/*   Updated: 2024/01/10 21:51:59 by flaviobiond      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "Fixed.hpp"
 const int	Fixed::_bits = 8;
@@ -141,35 +140,35 @@ Fixed Fixed::operator--(int){
 }
 
 // Pre-increment
-Fixed Fixed::operator++(void){
+Fixed &Fixed::operator++(void){
 	this->_value++;
 	return (*this);
 }
 
-Fixed	&Fixed::min(Fixed &f1, Fixed &f2)
+Fixed	&Fixed::min(Fixed &fix, Fixed &fix_1)
 {
-	if (f1 > f2)
-		return (f2);
-	return (f1);
+	if (fix > fix_1)
+		return (fix_1);
+	return (fix);
 }
 
-Fixed	&Fixed::max(Fixed &f1, Fixed &f2)
+Fixed	&Fixed::max(Fixed &fix, Fixed &fix_1)
 {
-	if (f1 < f2)
-		return (f2);
-	return (f1);
+	if (fix < fix_1)
+		return (fix_1);
+	return (fix);
 }
 
-Fixed const	&Fixed::min(Fixed const &f1, Fixed const &f2)
+Fixed const	&Fixed::min(Fixed const &fix, Fixed const &fix_1)
 {
-	if (f1 > f2)
-		return (f2);
-	return (f1);
+	if (fix > fix_1)
+		return (fix_1);
+	return (fix);
 }
 
-Fixed const	&Fixed::max(Fixed const &f1, Fixed const &f2)
+Fixed const	&Fixed::max(Fixed const &fix, Fixed const &fix_1)
 {
-	if (f1 < f2)
-		return (f2);
-	return (f1);
+	if (fix < fix_1)
+		return (fix_1);
+	return (fix);
 }

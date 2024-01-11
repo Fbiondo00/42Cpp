@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flaviobiondo <flaviobiondo@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/10 21:47:43 by flaviobiond       #+#    #+#             */
-/*   Updated: 2024/01/10 21:47:44 by flaviobiond      ###   ########.fr       */
+/*   Created: 2024/01/11 13:58:49 by flaviobiond       #+#    #+#             */
+/*   Updated: 2024/01/11 14:11:52 by flaviobiond      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
-#include "ClapTrap.hpp"
+# include <iostream>
+# include <string>
+# include "ClapTrap.hpp"
 
-int main()
+class ScavTrap : public ClapTrap
 {
-    ClapTrap a("ciccio");
-    ClapTrap b(a);
-    ClapTrap c;
+	public:
+		ScavTrap(void);
+		ScavTrap(std::string name);
+		ScavTrap(ScavTrap const &ct);
+		~ScavTrap(void);
+		void	attack(const std::string& target);
+		void	guardGate(void);
+};
 
-    c.attack(b.get_name());
-    b.takeDamange(0);
-    b.beRepaired(0);
-}
+#endif

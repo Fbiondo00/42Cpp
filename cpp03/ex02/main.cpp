@@ -5,21 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: flaviobiondo <flaviobiondo@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/10 21:47:43 by flaviobiond       #+#    #+#             */
-/*   Updated: 2024/01/10 21:47:44 by flaviobiond      ###   ########.fr       */
+/*   Created: 2024/01/10 21:47:24 by flaviobiond       #+#    #+#             */
+/*   Updated: 2024/01/11 14:16:41 by flaviobiond      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
-int main()
+int	main(void)
 {
-    ClapTrap a("ciccio");
-    ClapTrap b(a);
-    ClapTrap c;
 
-    c.attack(b.get_name());
-    b.takeDamange(0);
-    b.beRepaired(0);
+    ClapTrap	a;
+	ClapTrap	b("Eugenio");
+	ScavTrap	c("Ernesto");
+
+	a.attack(b.get_name());
+	b.takeDamange(a.get_Ad());
+	a.beRepaired(15);
+
+	c.attack(b.get_name());
+	b.takeDamange(c.get_Ad());
+	c.guardGate();
+
+	return (0);
 }

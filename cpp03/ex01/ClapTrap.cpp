@@ -5,24 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: flaviobiondo <flaviobiondo@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/10 21:47:50 by flaviobiond       #+#    #+#             */
-/*   Updated: 2024/01/11 00:35:28 by flaviobiond      ###   ########.fr       */
+/*   Created: 2024/01/10 21:47:31 by flaviobiond       #+#    #+#             */
+/*   Updated: 2024/01/11 14:25:20 by flaviobiond      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(){
-    std::cout << "Default constructor called" << std::endl;
+    std::cout << "ClapTrap-Default constructor called" << std::endl;
 
-    name = "Tucci";
+    name = "Ruggi";
     Hit_points = 10;
 	Energy_points = 10;
-	Attack_damage = 1;
+	Attack_damage = 0;
 }
 
 ClapTrap::ClapTrap(std::string const _name){
-    std::cout << "String constructor called" << std::endl;
+    std::cout << "ClapTrap-String constructor called" << std::endl;
 
     name = _name;
     Hit_points = 10;
@@ -31,7 +31,7 @@ ClapTrap::ClapTrap(std::string const _name){
 }
 
 ClapTrap::ClapTrap(ClapTrap const& other) {
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "ClapTrap-Copy constructor called" << std::endl;
 
 	*this = other;
 }
@@ -64,6 +64,7 @@ int	ClapTrap::get_Ad(void) const
 
 void	ClapTrap::operator = (ClapTrap const &Trap)
 {
+	std::cout << "Assignation operator called" << std::endl;
 	name = Trap.get_name();
 	Hit_points = Trap.get_Hp();
     Energy_points = Trap.get_Ep();

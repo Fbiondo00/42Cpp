@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: flaviobiondo <flaviobiondo@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/10 21:47:59 by flaviobiond       #+#    #+#             */
-/*   Updated: 2024/01/10 21:48:02 by flaviobiond      ###   ########.fr       */
+/*   Created: 2024/01/10 21:48:06 by flaviobiond       #+#    #+#             */
+/*   Updated: 2024/01/11 14:20:49 by flaviobiond      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 class ClapTrap
 {
-private:
+protected:
     std::string	name;
     int Hit_points;
     int Energy_points;
@@ -35,7 +35,6 @@ public:
     void set_Hp(const unsigned int Hit_points);
     void set_Ep(const unsigned int Energy_points); 
     void set_Ad(const unsigned int Attack_damage); 
-    // void set_name(C);
     ClapTrap();
     void operator = (const ClapTrap &Trap);
     ClapTrap(std::string const _name);
