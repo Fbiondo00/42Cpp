@@ -6,7 +6,7 @@
 /*   By: flaviobiondo <flaviobiondo@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 13:58:51 by flaviobiond       #+#    #+#             */
-/*   Updated: 2024/01/11 14:21:41 by flaviobiond      ###   ########.fr       */
+/*   Updated: 2024/02/25 16:40:49 by flaviobiond      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ ScavTrap::~ScavTrap(void)
 
 void	ScavTrap::attack(const std::string& target)
 {
-		std::cout << "ClapTrap " << this->name << " attacks " << target << ", causing "
+		std::cout << "ScavTrap " << this->name << " attacks " << target << ", causing "
 		<< Attack_damage << " points of damange!";
     Energy_points--;
     std::cout << "Your mana is " << Energy_points << std::endl;
