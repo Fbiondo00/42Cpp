@@ -6,7 +6,7 @@
 /*   By: flaviobiondo <flaviobiondo@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 15:09:02 by flaviobiond       #+#    #+#             */
-/*   Updated: 2024/03/14 14:35:47 by flaviobiond      ###   ########.fr       */
+/*   Updated: 2024/03/15 15:39:37 by flaviobiond      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ Cat&  Cat::operator=(Cat const &cat)
     if(this != &cat)
     {
         std::cout << cat.getType() << " in operator =" << std::endl;
-        this->typ = cat.getType();
+        this->type = cat.getType();
     }
     return *(this);
 }

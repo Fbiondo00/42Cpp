@@ -6,7 +6,7 @@
 /*   By: flaviobiondo <flaviobiondo@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 15:09:04 by flaviobiond       #+#    #+#             */
-/*   Updated: 2024/02/28 12:38:07 by flaviobiond      ###   ########.fr       */
+/*   Updated: 2024/03/15 15:42:18 by flaviobiond      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class   Animal
     std::string	getType(void) const;
     virtual void	makeSound(void) const;
     protected:
-		std::string	typ;
+		std::string	type;
 };
 
 #endif

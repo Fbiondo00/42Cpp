@@ -6,7 +6,7 @@
 /*   By: flaviobiondo <flaviobiondo@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 15:09:06 by flaviobiond       #+#    #+#             */
-/*   Updated: 2024/02/28 15:44:22 by flaviobiond      ###   ########.fr       */
+/*   Updated: 2024/03/15 16:03:49 by flaviobiond      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,4 @@ void Animal::operator=(Animal const &animal)
 std::string Animal::getType(void) const
 {
     return(this->typ);
-}
-
-void  Animal::makeSound(void) const
-{
-    std::cout << this->getType() <<  "is a makeSound" << std::endl;
-    return ;
 }

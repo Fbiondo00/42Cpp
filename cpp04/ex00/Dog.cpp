@@ -6,7 +6,7 @@
 /*   By: flaviobiondo <flaviobiondo@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 15:09:11 by flaviobiond       #+#    #+#             */
-/*   Updated: 2024/03/14 14:35:54 by flaviobiond      ###   ########.fr       */
+/*   Updated: 2024/03/15 15:39:59 by flaviobiond      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ Dog&  Dog::operator=(Dog const &dog)
     if(this != &dog)
     {
         std::cout << dog.getType() << " in operator =" << std::endl;
-        this->typ = dog.getType();
+        this->type = dog.getType();
     }
     return *(this);
 }
