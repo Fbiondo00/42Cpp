@@ -1,6 +1,6 @@
 NAME				:=		main
 
-SRCS				:=		main.cpp Data.cpp Serializer.cpp
+SRCS				:=	$(wildcard *.cpp) 
 
 OBJS				:=		${SRCS:.cpp=.o}
 

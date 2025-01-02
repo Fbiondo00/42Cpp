@@ -1,6 +1,6 @@
 NAME				:=		scalar
 
-SRCS				:=		main.cpp ScalarConverter.cpp
+SRCS				:=		main.cpp ScalarConverter.cpp utils.cpp
 
 OBJS				:=		${SRCS:.cpp=.o}
 

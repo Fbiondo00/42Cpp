@@ -1,10 +1,29 @@
-#include "Serializer.hpp"
 
-int main()
+#include "utils.h"
+
+
+
+int	main(void)
 {
-	Data data(12, 40.2, "maialona");
-	std::cout << data << std::endl;
-	uintptr_t pointer = Serializer::serialize(&data);
-	std::cout << pointer << std::endl;
-	std::cout << *Serializer::deserialize(pointer) << std::endl;
+	Data	base;
+	Data	*pBase;
+	Data	*cecker;
+
+	uintptr_t	serial;
+
+	dataInit(base);
+
+
+	pBase = &base;
+	dataPrint(*pBase);
+	serial = Serializer::serialize(pBase);
+
+	cecker = Serializer::deserialize(serial);
+	dataPrint(*pBase);
+	dataPrint(*cecker);
+
+	std::cout<<"Check of the address:\n"<<pBase<<" the copy "<<cecker<<std::endl;
+	if (pBase == cecker)
+		std::cout<<"all ok"<<std::endl;
+	return (0);
 }

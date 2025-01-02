@@ -1,10 +1,22 @@
-#ifndef Base_HPP
-#define Base_HPP
+
+
+#ifndef BASE_HPP
+#define BASE_HPP
+
+#include <iostream>
+#include <limits>
+#include <string.h>
+#include <cstdlib> //library for convertion
+#include <cctype> //to help me do checks for chars
+#include <sstream> //to do the convertion in a styled way
+#include <iomanip> //in this way i can print the numbers with the point more precisely
+#include <stdint.h>
+
 
 class Base
 {
 	public:
-		virtual ~Base();
+		virtual	~Base();
 };
 
 class A : public Base
@@ -13,6 +25,7 @@ class A : public Base
 		A();
 		virtual ~A();
 };
+
 
 class B : public Base
 {
@@ -28,8 +41,8 @@ class C : public Base
 		virtual ~C();
 };
 
-Base * generate(void);
-void identify(Base* p);
-void identify(Base& p);
-
+Base *	generate(void);
+void	identify(Base* p);
+void	identify(Base& p);
 #endif
+

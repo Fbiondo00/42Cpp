@@ -1,30 +1,38 @@
+
+
 #include "Serializer.hpp"
 
-Serializer::Serializer()
-{
-}
 
 Serializer::~Serializer()
+{}
+
+Serializer::Serializer(const Serializer& obj)
 {
+	(void)obj;
 }
 
-Serializer::Serializer(const Serializer &toCopy)
+Serializer& Serializer::operator=(const Serializer& obj)
 {
-	*this = toCopy;
+	(void) obj;
+	return *this;
 }
 
-Serializer& Serializer::operator=(const Serializer &toCopy)
-{
-	if (this == &toCopy)
-		return (*this);
-	return (*this);
-}
+
+
 uintptr_t Serializer::serialize(Data* ptr)
 {
-	return reinterpret_cast<uintptr_t>(ptr);
+	uintptr_t	beta;
+
+	beta = reinterpret_cast<uintptr_t>((void*)ptr);
+	return (beta);
 }
+
 
 Data* Serializer::deserialize(uintptr_t raw)
 {
-	return reinterpret_cast<Data*>(raw);
+	Data*	alpha;
+
+	alpha = reinterpret_cast<Data*>(raw);
+
+	return (alpha);
 }
